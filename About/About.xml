@@ -1,33 +1,34 @@
 <?xml version="1.0"?>
 <ModMetaData>
-            <packageId>dev.tobot.mod-template</packageId>
-            <name>Mod Template</name>
-            <authors>
-                <li>Toby</li>
-            </authors>
-            <description>A mod template.\nReady to build on NixOS.</description>
-            <supportedVersions>
-                <li>1.4</li>
-            </supportedVersions>
-            <modVersion IgnoreIfNoMatchingField="True">0.1.0.0</modVersion>
-            <url/>
-            <modDependencies/>
-            <modDependenciesByVersion>
-                <!-- <v1.4>
-                    <li>
-                        <packageId>brrainz.harmony</packageId>
-                        <displayName>Harmony</displayName>
-                        <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
-                        <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
-                    </li>
-                </v1.4> -->
-            </modDependenciesByVersion>
-            <loadAfter/>
-            <loadAfterByVersion/>
-            <forceLoadAfter/>
-            <loadBefore/>
-            <loadBeforeByVersion/>
-            <forceLoadBefore/>
-            <incompatibleWith/>
-            <incompatibleWithByVersion/>
-        </ModMetaData>
+  <packageId>dev.tobot.mod-template</packageId>
+  <name>Mod Template</name>
+  <authors>
+    <li>Toby</li>
+  </authors>
+  <description>A mod template.\nReady to build on NixOS.</description>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  <!-- Gets automatically populated with VersionPrefix (see above) -->
+  <modVersion IgnoreIfNoMatchingField="True">0.1.0.0</modVersion>
+  <url/>
+  <modDependencies/>
+  <modDependenciesByVersion>
+    <!-- <v1.4>
+      <li>
+        <packageId>brrainz.harmony</packageId>
+        <displayName>Harmony</displayName>
+        <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+        <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+      </li>
+    </v1.4> -->
+  </modDependenciesByVersion>
+  <loadAfter/>
+  <loadAfterByVersion/>
+  <forceLoadAfter/>
+  <loadBefore/>
+  <loadBeforeByVersion/>
+  <forceLoadBefore/>
+  <incompatibleWith/>
+  <incompatibleWithByVersion/>
+</ModMetaData>
