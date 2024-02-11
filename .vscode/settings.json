@@ -1,0 +1,10 @@
+{
+    // "explorer.excludeGitIgnore": true,
+    "files.exclude": {
+        ".direnv": true,
+        ".vscode/obj": true
+    },
+    "files.readonlyInclude": {
+        "log/rimworld.log": true
+    }
+}

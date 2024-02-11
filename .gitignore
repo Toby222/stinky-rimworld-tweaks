@@ -1,6 +1,3 @@
 /.vscode/obj
-
-# /*/Assemblies
-# /*/Assemblies/*.pdb
-# /.vscode
-# /Source
+/.direnv/
+/log/rimworld.log
