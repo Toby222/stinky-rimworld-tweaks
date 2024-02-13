@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <packageId>dev.tobot.mod-template</packageId>
   <name>Mod Template</name>
@@ -9,7 +9,6 @@
   <supportedVersions>
     <li>1.4</li>
   </supportedVersions>
-  <!-- Gets automatically populated with VersionPrefix (see above) -->
   <modVersion IgnoreIfNoMatchingField="True">0.1.0.0</modVersion>
   <url/>
   <modDependencies/>

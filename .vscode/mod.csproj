@@ -25,8 +25,9 @@
             <supportedVersions>
                 <li>1.4</li>
             </supportedVersions>
-            <!-- Gets automatically populated with VersionPrefix (see above) -->
-            <modVersion IgnoreIfNoMatchingField="True" />
+            <modVersion IgnoreIfNoMatchingField="True">
+                <!-- Gets automatically populated with VersionPrefix (see above) -->
+            </modVersion>
             <url />
             <modDependencies />
             <modDependenciesByVersion>
