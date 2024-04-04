@@ -22,6 +22,8 @@
     "csharp.inlayHints.enableInlayHintsForImplicitVariableTypes": true,
     "csharp.inlayHints.enableInlayHintsForLambdaParameterTypes": true,
     "csharp.inlayHints.enableInlayHintsForImplicitObjectCreation": true,
+    "csharp.suppressDotnetInstallWarning": true,
+    "csharp.suppressDotnetRestoreNotification": true,
     "dotnet.server.useOmnisharp": true,
     "omnisharp.enableLspDriver": false
 }

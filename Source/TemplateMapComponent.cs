@@ -1,5 +1,3 @@
-#nullable enable
-
 using RimWorld;
 using Verse;
 
@@ -7,11 +5,8 @@ using Verse;
 
 namespace Template;
 
-public class TemplateMapComponent : MapComponent
+public class TemplateMapComponent(Map map) : MapComponent(map)
 {
-    public TemplateMapComponent(Map map)
-        : base(map) { }
-
     public override void FinalizeInit()
     {
         Messages.Message("Success", null, MessageTypeDefOf.PositiveEvent);

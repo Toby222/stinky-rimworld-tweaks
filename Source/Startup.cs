@@ -1,6 +1,4 @@
-﻿#nullable enable
-
-using Verse;
+﻿using Verse;
 
 // using HarmonyLib;
 
