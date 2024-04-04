@@ -10,7 +10,7 @@
     <li>1.4</li>
   </supportedVersions>
   <modVersion IgnoreIfNoMatchingField="True">0.1.0.0</modVersion>
-  <url/>
+  <url>https://git.tobot.dev/toby/rimworld-mod-template</url>
   <modDependencies/>
   <modDependenciesByVersion>
     <!-- <v1.4>

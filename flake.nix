@@ -29,7 +29,6 @@
             nixpkgs-fmt.enable = true;
             csharpier.enable = true;
             prettier.enable = true;
-            nixfmt.enable = true;
           };
         };
       };

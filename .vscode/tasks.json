@@ -2,6 +2,13 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "analyze",
+            "type": "shell",
+            "group": "none",
+            "command": ".vscode/roslynator.sh",
+            "problemMatcher": []
+        },
+        {
             "label": "format",
             "type": "shell",
             "group": "none",
@@ -9,7 +16,7 @@
             "problemMatcher": []
         },
         {
-            "label": "build mod",
+            "label": "build mod (Debug)",
             "type": "shell",
             "group": {
                 "kind": "build",
@@ -18,10 +25,24 @@
             "command": ".vscode/build.sh",
             "problemMatcher": [
                 "$msCompile"
-            ]
+            ],
+            "dependsOn": []
         },
         {
-            "label": "run game",
+            "label": "build mod (Release)",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": ".vscode/build.sh Release",
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "dependsOn": []
+        },
+        {
+            "label": "run game (Debug)",
             "type": "shell",
             "group": {
                 "kind": "none",
@@ -29,13 +50,29 @@
             },
             "command": ".vscode/launch.sh",
             "problemMatcher": [],
+            "dependsOrder": "sequence",
             "dependsOn": [
-                "link mod directory",
-                "build mod"
+                "build mod (Debug)",
+                "set up mod directory"
             ]
         },
         {
-            "label": "run game (quicktest)",
+            "label": "run game (Release)",
+            "type": "shell",
+            "group": {
+                "kind": "none",
+                "isDefault": true
+            },
+            "command": ".vscode/launch.sh",
+            "problemMatcher": [],
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "build mod (Release)",
+                "set up mod directory"
+            ]
+        },
+        {
+            "label": "run game (Debug + quicktest)",
             "type": "shell",
             "group": {
                 "kind": "none",
@@ -43,13 +80,14 @@
             },
             "command": ".vscode/launch.sh -quicktest",
             "problemMatcher": [],
+            "dependsOrder": "sequence",
             "dependsOn": [
-                "link mod directory",
-                "build mod"
+                "build mod (Debug)",
+                "set up mod directory"
             ]
         },
         {
-            "label": "link mod directory",
+            "label": "set up mod directory",
             "type": "shell",
             "group": {
                 "kind": "none"

@@ -13,6 +13,7 @@
         <DebugType>none</DebugType>
         <DebugSymbols>false</DebugSymbols>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <Nullable>enable</Nullable>
         <!-- Contents of About.xml
             See https://rimworldwiki.com/wiki/Modding_Tutorials/About.xml -->
         <ModMetaData>
@@ -28,7 +29,7 @@
             <modVersion IgnoreIfNoMatchingField="True">
                 <!-- Gets automatically populated with VersionPrefix (see above) -->
             </modVersion>
-            <url />
+            <url>https://git.tobot.dev/toby/rimworld-mod-template</url>
             <modDependencies />
             <modDependenciesByVersion>
                 <!-- <v1.4>
@@ -52,12 +53,20 @@
     </PropertyGroup>
     <ItemGroup>
         <!-- Mod -->
-        <Compile Include="../Source/*" />
+        <Compile Include="../Source/**/*" />
         <PackageReference Include="Krafs.Rimworld.Ref"
                           Version="1.4.3901" />
         <!-- Set IncludeAssets to 'compile' to enable Harmony -->
-        <PackageReference Include="Lib.Harmony"
-                          Version="2.2.2"
+        <PackageReference Include="Lib.Harmony.Thin"
+                          Version="2.3.3"
                           IncludeAssets="none" />
+        <PackageReference Include="roslynator.analyzers"
+                          Version="4.12.0"
+                          IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive"
+                          PrivateAssets="all" />
+        <PackageReference Include="roslynator.formatting.analyzers"
+                          Version="4.12.0"
+                          IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive"
+                          PrivateAssets="all" />
     </ItemGroup>
 </Project>

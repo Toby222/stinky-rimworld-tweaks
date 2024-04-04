@@ -6,7 +6,7 @@ using Verse;
 namespace Template;
 
 [DefOf]
-public class TemplateDefOf
+public static class TemplateDefOf
 {
     public static LetterDef success_letter;
 }
