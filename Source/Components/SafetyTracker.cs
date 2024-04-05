@@ -11,11 +11,13 @@ public class SafetyTracker(World world) : WorldComponent(world)
 
     private static bool AllMapsSafe =>
         Find.Maps.TrueForAll(map =>
-            map.mapPawns.AllPawnsSpawned.TrueForAll(pawn => !pawn.HostileTo(Faction.OfPlayer))
+            GenHostility.AnyHostileActiveThreatToPlayer(map)
         );
 
     public override void WorldComponentUpdate()
     {
+        if (!StinkyTweaks.Settings.SafetySpeedupEnable) return;
+
         bool allMapsSafe = AllMapsSafe;
         bool slowTime =
             Find.TickManager.CurTimeSpeed

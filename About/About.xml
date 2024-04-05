@@ -5,11 +5,11 @@
   <authors>
     <li>Toby</li>
   </authors>
-  <description>Various random changes\n\n&lt;b&gt;Auto speedup&lt;/b&gt;\nSet speed to ultra after some configured time on normal speed without hostiles.\n\nMore to be added whenever I come up with any</description>
+  <description>Various random changes\n\n&lt;b&gt;Auto speedup&lt;/b&gt;\nAutomatically speeds up the game to Ultra speed if you're on normal speed there are no active threats for some time.\n\nMore to be added whenever I come up with any</description>
   <supportedVersions>
     <li>1.4</li>
   </supportedVersions>
-  <modVersion IgnoreIfNoMatchingField="True">1.0.0.0</modVersion>
+  <modVersion IgnoreIfNoMatchingField="True">1.1.0.0</modVersion>
   <url>https://github.com/Toby222/stinky-rimworld-tweaks</url>
   <modDependencies/>
   <modDependenciesByVersion>

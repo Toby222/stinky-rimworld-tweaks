@@ -10,7 +10,7 @@ public class StinkyTweaksSettings : ModSettings
     private static void LookField<T>(ref T value, string label, T defaultValue)
         where T : struct
     {
-        Scribe_Values.Look(ref value, label, defaultValue);
+        Scribe_Values.Look(ref value, label, defaultValue, forceSave: true);
     }
 
     private static void LookHashSet<T>(
