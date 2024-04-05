@@ -1,21 +1,23 @@
 using System.Reflection;
-// using HarmonyLib;
+using HarmonyLib;
 using Verse;
 
-namespace Template;
+namespace StinkyTweaks;
 
+using System;
+using System.Globalization;
 using Settings;
 using UnityEngine;
 
-public class TemplateMod : Mod
+public class StinkyTweaks : Mod
 {
-    internal static string Translate(string key)
+    internal static string Translate(string key, params NamedArgument[] args)
     {
-        const string TranslationKey = nameof(TemplateMod);
-        return (TranslationKey + "." + key).Translate();
+        const string TranslationKey = nameof(StinkyTweaks);
+        return (TranslationKey + "." + key).Translate(args);
     }
 
-    public TemplateMod(ModContentPack content)
+    public StinkyTweaks(ModContentPack content)
         : base(content)
     {
 #if DEBUG
@@ -24,18 +26,27 @@ public class TemplateMod : Mod
         const string build = "Release";
 #endif
         Log.Message(
-            $"Running Version {Assembly.GetAssembly(typeof(TemplateMod)).GetName().Version} "
+            $"Running Version {Assembly.GetAssembly(typeof(StinkyTweaks)).GetName().Version} "
                 + build
         );
-
         Log.Message(content.ModMetaData.packageIdLowerCase);
 
-        // Harmony harmony = new(content.ModMetaData.packageIdLowerCase);
+        ParseHelper.Parsers<StinkyTweaksSettings.SafetySpeedupSafeTimeStruct>.Register(
+            input => new StinkyTweaksSettings.SafetySpeedupSafeTimeStruct(
+                TimeSpan.FromSeconds(double.Parse(input))
+            )
+        );
+
+        Settings = GetSettings<StinkyTweaksSettings>();
+        WriteSettings();
+
+        Harmony harmony = new(content.ModMetaData.packageIdLowerCase);
+        harmony.PatchAll();
     }
 
 #nullable disable // Set in constructor.
 
-    public static TemplateSettings Settings { get; private set; }
+    public static StinkyTweaksSettings Settings { get; private set; }
 
 #nullable enable
 
@@ -51,7 +62,7 @@ public class TemplateMod : Mod
 
     public static class Log
     {
-        const string LogPrefix = "Toby's Template Mod - ";
+        const string LogPrefix = "Stinky Tweaks - ";
 
         public static void DebugError(string message)
         {
@@ -77,7 +88,7 @@ public class TemplateMod : Mod
             Verse.Log.Warning(LogPrefix + message);
         }
 
-        public static void DebugLog(string message)
+        public static void DebugMessage(string message)
         {
 #if DEBUG
             Message(message);

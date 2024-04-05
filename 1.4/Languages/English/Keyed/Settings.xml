@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <StinkyTweaks.SettingsCategory>Stinky Tweaks</StinkyTweaks.SettingsCategory>
+    <StinkyTweaks.SafetySpeedup><![CDATA[<b>Safety Speedup</b>]]></StinkyTweaks.SafetySpeedup>
+    <StinkyTweaks.SafetySpeedup.Explanation>Automatically speeds up the game to Ultra speed if there are no enemies and you're not paused</StinkyTweaks.SafetySpeedup.Explanation>
+    <StinkyTweaks.SafetySpeedup.SafeTimeLabel>Time of safety before speedup: {timeSpan}</StinkyTweaks.SafetySpeedup.SafeTimeLabel>
+</LanguageData>
